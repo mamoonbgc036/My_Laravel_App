@@ -1,0 +1,58 @@
+#maincontent{
+    display: flex;
+    justify-content: space-around;
+}
+
+#main ul, #user ul{
+    display: flex;
+}
+
+#main ul li, #user ul li{
+    padding: 10px;
+    margin: 10px;
+}
+
+#register form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#register form input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin: 8px auto;
+}
+
+#register h3{
+    text-align: center;
+    color: red;
+}
+
+#register h2{
+    text-align: center;
+}
+
+#register form button{
+    padding: 10px;
+    margin-top: 10px;
+    background-color: seagreen;
+}
+
+#error{
+    color: red;
+}
+
+#remember{
+    display: flex;
+}
+
+#post{
+    background-color: seagreen;
+    color: seashell;
+    margin-top: 5px;
+}
+
+#like{
+    display: flex;
+}
