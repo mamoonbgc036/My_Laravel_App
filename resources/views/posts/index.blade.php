@@ -16,6 +16,11 @@
             @foreach($posts as $post)
                     <div id="post">
                         {{ $post->body }} posted at <h4>{{ $post->created_at->diffForHumans() }}</h4>
+                        <form action="{{ route('post.destroy', $post->id ) }}" method="post">
+                            @csrf 
+                            @method('delete')
+                            <button type="submit">Delete</button>
+                        </form>
                         <p>Posted by <h3>{{ $post->user->name }}</h3></p>
                         <div id="like">
                             @if(!$post->likedBy(auth()->user()))

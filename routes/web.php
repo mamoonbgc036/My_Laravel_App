@@ -21,6 +21,7 @@ use App\Http\Controllers\auth\RegisterController;
 
 Route::get('/post', [ PostController::class, 'index'])->name('post');
 Route::post('/post', [PostController::class, 'store']);
+Route::delete('/post/{post}/destroy', [PostController::class, 'destroy'])->name('post.destroy');
 
 Route::get('/home', [ HomeController::class, 'index'] )->name('home');
 
