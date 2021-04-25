@@ -1,18 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div>
-       <form action="{{ route('post') }}" method="post">
-            @csrf
-            <textarea name="body" id="" cols="30" rows="10" placeholder="type your post here"></textarea>
-                @error('body')
-                    <div id="error">
-                        {{ $message }}
-                    </div>
-                @enderror
-            <button type="submit">Submit</button>
-       </form>
-    </div>
-    @if($posts->count())
+@if($posts->count())
             @foreach($posts as $post)
                     <div id="post">
                         {{ $post->body }} posted at <h4>{{ $post->created_at->diffForHumans() }}</h4>
